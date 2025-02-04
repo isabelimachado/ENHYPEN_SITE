@@ -1,0 +1,349 @@
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8d4d4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+body.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.membro-container,
+.membro-container2 {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    transform: translateY(20px);
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+
+.membro {
+    margin: 20px;
+    text-align: center;
+    border-color: #0f0307;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #fff;
+    opacity: 0;
+    width: 250px;
+}
+
+body.loaded .membro-container .membro,
+body.loaded .membro-container2 .membro {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.membro img {
+    width: 150px;
+    height: auto;
+    border-color: #0f0307;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    align-items: center;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    color: #db7093;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 250;
+    color: #1a1212;
+}
+
+header {
+    background-color: #db7093;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.bio {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: default;
+}
+
+.fotos {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 620px;
+    padding-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    
+}
+
+main {
+    padding: 20px;
+}
+
+li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+footerr {
+    margin: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #db7093;
+    color: #1a1212;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    margin: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e788a8;
+    width: 100%;
+    position: relative;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+marquee {
+    font-size: 14px;
+    white-space: nowrap;
+    color: #fff;
+}
+
+footer span {
+    margin: 0 10px;
+}
+
+.home-image2 {
+    width: 93%;
+    height: 35%;
+    margin: auto;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home-image1 {
+    display: flex;
+    width: 45%;
+    height: 50%;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gif {
+    width: 93%;
+    height: 35%;
+    margin: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.playlist {
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.album-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    margin: 50px auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    text-align: center;
+    gap: 11px;
+}
+
+.album {
+    margin: 30px;
+    text-align: center;
+}
+
+.album-img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.enhypen-button {
+    margin: 16px;
+    background-color: #ff96b9;
+    color: white;
+    border: 2px solid #8b465d;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.enhypen-button2 {
+    background-color: #c86b85;
+    color: #fff;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 25px;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.enhypen-button:hover,
+.membro:hover,
+.album-img:hover,
+.enhypen-button2:hover{
+    transform: scale(1.05);
+    transition: transform 0.4s, box-shadow 0.4s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px; 
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1000px; 
+    margin: auto;
+}
+
+#galeria img {    
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.fundo {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin: 20px 0;
+}
+
+.imagemturne{
+    width:35%;
+    height:35%;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.bioturne{
+    display: inline-block;
+    width: 60%;
+    margin-left: 20px;
+    vertical-align: top;
+}
+
+.imagemshow{
+    max-height: 50%;
+    max-width: 80%;
+    border-radius: 30px;
+    display: flex;
+}
+
+
